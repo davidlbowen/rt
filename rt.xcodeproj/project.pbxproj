@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		4A36EB871A82DB1D00F7E322 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A36EB861A82DB1D00F7E322 /* AppDelegate.swift */; };
-		4A36EB891A82DB1D00F7E322 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A36EB881A82DB1D00F7E322 /* ViewController.swift */; };
 		4A36EB8C1A82DB1D00F7E322 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A36EB8A1A82DB1D00F7E322 /* Main.storyboard */; };
 		4A36EB8E1A82DB1D00F7E322 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A36EB8D1A82DB1D00F7E322 /* Images.xcassets */; };
 		4A36EB911A82DB1D00F7E322 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A36EB8F1A82DB1D00F7E322 /* LaunchScreen.xib */; };
 		4A36EB9D1A82DB1D00F7E322 /* rtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A36EB9C1A82DB1D00F7E322 /* rtTests.swift */; };
+		4AEB4AC11A868AA7008FF024 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB4AC01A868AA7008FF024 /* MoviesViewController.swift */; };
+		4AEB4AC41A86B443008FF024 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEB4AC31A86B443008FF024 /* MovieTableViewCell.swift */; };
+		4AF0CC5B1A86D2D200064A6E /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF0CC5A1A86D2D200064A6E /* MovieDetailViewController.swift */; };
+		6CD17926907608EC4A885614 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 172299D49D2251D24EEAA88C /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +29,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		172299D49D2251D24EEAA88C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A36EB811A82DB1D00F7E322 /* rt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A36EB851A82DB1D00F7E322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A36EB861A82DB1D00F7E322 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4A36EB881A82DB1D00F7E322 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4A36EB8B1A82DB1D00F7E322 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A36EB8D1A82DB1D00F7E322 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4A36EB901A82DB1D00F7E322 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4A36EB961A82DB1D00F7E322 /* rtTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rtTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A36EB9B1A82DB1D00F7E322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A36EB9C1A82DB1D00F7E322 /* rtTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rtTests.swift; sourceTree = "<group>"; };
+		4AEB4AC01A868AA7008FF024 /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		4AEB4AC31A86B443008FF024 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		4AF0CC571A86CDD100064A6E /* rt-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rt-Bridging-Header.h"; sourceTree = "<group>"; };
+		4AF0CC5A1A86D2D200064A6E /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		C4C51F80135F706E3DB8342B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		FA4A20672596E29DF74E1478 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CD17926907608EC4A885614 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +72,8 @@
 				4A36EB831A82DB1D00F7E322 /* rt */,
 				4A36EB991A82DB1D00F7E322 /* rtTests */,
 				4A36EB821A82DB1D00F7E322 /* Products */,
+				78146E8F5E42CA77D3D7527B /* Pods */,
+				58D338AA1E0FE295B021242B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +89,14 @@
 		4A36EB831A82DB1D00F7E322 /* rt */ = {
 			isa = PBXGroup;
 			children = (
+				4AEB4AC21A868AC9008FF024 /* View Controllers */,
 				4A36EB861A82DB1D00F7E322 /* AppDelegate.swift */,
-				4A36EB881A82DB1D00F7E322 /* ViewController.swift */,
 				4A36EB8A1A82DB1D00F7E322 /* Main.storyboard */,
 				4A36EB8D1A82DB1D00F7E322 /* Images.xcassets */,
 				4A36EB8F1A82DB1D00F7E322 /* LaunchScreen.xib */,
 				4A36EB841A82DB1D00F7E322 /* Supporting Files */,
+				4AEB4AC31A86B443008FF024 /* MovieTableViewCell.swift */,
+				4AF0CC571A86CDD100064A6E /* rt-Bridging-Header.h */,
 			);
 			path = rt;
 			sourceTree = "<group>";
@@ -112,6 +126,32 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4AEB4AC21A868AC9008FF024 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4AF0CC5A1A86D2D200064A6E /* MovieDetailViewController.swift */,
+				4AEB4AC01A868AA7008FF024 /* MoviesViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		58D338AA1E0FE295B021242B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				172299D49D2251D24EEAA88C /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		78146E8F5E42CA77D3D7527B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FA4A20672596E29DF74E1478 /* Pods.debug.xcconfig */,
+				C4C51F80135F706E3DB8342B /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A36EBA01A82DB1D00F7E322 /* Build configuration list for PBXNativeTarget "rt" */;
 			buildPhases = (
+				7464CE39BACB89779A18C4F5 /* Check Pods Manifest.lock */,
 				4A36EB7D1A82DB1D00F7E322 /* Sources */,
 				4A36EB7E1A82DB1D00F7E322 /* Frameworks */,
 				4A36EB7F1A82DB1D00F7E322 /* Resources */,
+				42B9F3D71DD878FFA55FC643 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,13 +249,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		42B9F3D71DD878FFA55FC643 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7464CE39BACB89779A18C4F5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4A36EB7D1A82DB1D00F7E322 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A36EB891A82DB1D00F7E322 /* ViewController.swift in Sources */,
+				4AF0CC5B1A86D2D200064A6E /* MovieDetailViewController.swift in Sources */,
 				4A36EB871A82DB1D00F7E322 /* AppDelegate.swift in Sources */,
+				4AEB4AC11A868AA7008FF024 /* MoviesViewController.swift in Sources */,
+				4AEB4AC41A86B443008FF024 /* MovieTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,21 +411,28 @@
 		};
 		4A36EBA11A82DB1D00F7E322 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA4A20672596E29DF74E1478 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = rt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "rt/rt-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		4A36EBA21A82DB1D00F7E322 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4C51F80135F706E3DB8342B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = rt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "rt/rt-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -405,6 +489,7 @@
 				4A36EBA21A82DB1D00F7E322 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4A36EBA31A82DB1D00F7E322 /* Build configuration list for PBXNativeTarget "rtTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +498,7 @@
 				4A36EBA51A82DB1D00F7E322 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
