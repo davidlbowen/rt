@@ -16,28 +16,47 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     var movies: [NSDictionary] = []
     var selectedMovie: NSIndexPath?
+    var refreshControl: UIRefreshControl!
     
     override func viewDidLoad() {
+        NSLog("viewDidLoad")
         super.viewDidLoad()
 
+        title = "Rotten Tomatoes"
         tableView.dataSource = self
         tableView.delegate = self
-        
-        var url = NSURL(string: "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?apikey=\(apikey)")
-        var request = NSURLRequest(URL: url!)
-        
-        SVProgressHUD.show()
-        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {
-            (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
-                var responseDictionary = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary
-            
-                self.movies = responseDictionary["movies"] as [NSDictionary]
-                self.tableView.reloadData()
-                //NSLog("Response: %@", responseDictionary)
-                SVProgressHUD.dismiss()
 
+        SVProgressHUD.show()
+        loadMovieDataAsync() {
+            () -> Void in
+            SVProgressHUD.dismiss()
         }
         
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: "onRefresh", forControlEvents: UIControlEvents.ValueChanged)
+        tableView.insertSubview(refreshControl, atIndex: 0)
+    }
+    
+    func loadMovieDataAsync(onFinished: () -> Void) {
+        var url = NSURL(string: "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?apikey=\(apikey)")
+        var request = NSURLRequest(URL: url!)
+
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {
+            (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+            
+            onFinished()
+            
+            if ((error?) != nil || (response as NSHTTPURLResponse).statusCode != 200) {
+                self.title = "\u{26A0} Network Error"
+            }
+            else {
+                var responseDictionary = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary
+                self.movies = responseDictionary["movies"] as [NSDictionary]
+                NSLog("Movie data loaded")
+            }
+            
+            self.tableView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,17 +88,23 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         selectedMovie = indexPath
     }
     
-    // MARK: - Navigation
+    // Navigation
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let vc = segue.destinationViewController as MovieDetailViewController
         NSLog("prepare for segue, sender=%@", "\(sender.dynamicType())")
 
         let indexPath = tableView.indexPathForSelectedRow()
-        /*
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        */
         vc.movie = movies[indexPath!.row]
     }
 
+    // Refreshing
+    
+    func onRefresh() {
+        loadMovieDataAsync() {
+            () -> Void in
+            self.refreshControl.endRefreshing()
+        }
+    }
 
 }
