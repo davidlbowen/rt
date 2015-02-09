@@ -15,3 +15,7 @@ Required
 
 [X] User can pull to refresh the movie list.
 
+-------------------------------
+
+![image](rt.gif)
+![image](rt-error.gif)
